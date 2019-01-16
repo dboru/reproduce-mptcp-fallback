@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 controller="./controllers/controller.py"
 observe=1
 rest=1
