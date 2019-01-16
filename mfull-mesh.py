@@ -20,7 +20,7 @@ import random
 
 def readTrace():
     trace=[]
-    with open("./Trace-Generator/trace_file/output.trace") as fp:
+    with open("./request-trace-generator/trace_file/output.trace") as fp:
         lines = fp.readlines()
         for line in lines:
             trace.append(line.split())
