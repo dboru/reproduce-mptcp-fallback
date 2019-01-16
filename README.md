@@ -22,7 +22,10 @@ Dependencies
 3. Ubuntu 16.04 with Linux kernel v4.14.79 (MPTCP v0.94) OR Linux kernel v4.14.91 (MPTCP v0.94.2)
 
 
-Trace dump reproduced with Linux kernel v4.14.74 (MPTCP v0.94) is availabe in the output subdirectory
+Traces from my test
+-------------------
+
+Trace dump reproduced with Linux kernel v4.14.79 (MPTCP v0.94) is availabe in the output subdirectory
 
 https://github.com/dboru/reproduce-mptcp-fallback/blob/master/output/files-pcap.tar.gz
 
@@ -30,6 +33,8 @@ Trace dump reproduced with Linux kernel v4.14.91, MPTCP v0.94.2 is availabe in t
 
 https://github.com/dboru/reproduce-mptcp-fallback/blob/master/output/mptcp-v0.94.2-pm-fullmesh-subflows-4.tar.gz
 https://github.com/dboru/reproduce-mptcp-fallback/blob/master/output/mptcp-v0.94.2-pm-ndiffports-subflows-4.tar.gz
+
+
 
  
 
