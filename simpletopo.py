@@ -1,4 +1,4 @@
-''' Testing out simple topologies'''
+''' Simple mesh network '''
 
 from mininet.topo import Topo
 from mininet.util import irange

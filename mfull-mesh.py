@@ -4,6 +4,11 @@ from mininet.net import Mininet
 from mininet.node import RemoteController
 from mininet.node import Controller, RemoteController, OVSKernelSwitch, CPULimitedHost
 from mininet.cli import CLI
+
+from mininet.net import Mininet
+from mininet.link import TCLink
+from mininet.util import custom
+
 from mininet.log import setLogLevel, info
 from simpletopo import simpleTopo
 from random import choice, shuffle,randint,randrange,uniform
@@ -49,12 +54,11 @@ def send_request(client, server,flowsize,output_dir='output'):
 		(server.IP(),flowsize, output_dir,client.IP(),server.IP()),shell=True)
 
 topo = simpleTopo()
-    # host = custom(CPULimitedHost, cpu=cpu)
-    # if args.mdtcp or args.dctcp:
-    #     link = custom(TCLink, bw=args.bw,delay=str(args.delay)+'ms',**red_ecn)
-    # else:
-    #     link = custom(TCLink, bw=args.bw,delay=str(args.delay)+'ms',**red)
-net = Mininet(topo,controller=RemoteController, autoStaticArp=True)
+
+link = custom(TCLink, bw=10,delay='1ms',max_queue_size=100)
+
+net = Mininet(topo,link=link, switch=OVSKernelSwitch,controller=RemoteController, autoStaticArp=True)
+
 net.start()
 # enable MPTCP
 enableMPTCP(4)
