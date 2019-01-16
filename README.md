@@ -7,8 +7,6 @@ How to run
 sh run-test.sh (root)
 
 MPTCP path manager and number of subflows can be changed in the python script (mfull-messh.py)
-=======
-MPTCP path manager and number of subflows can be changed in the python script (mfull-messh.py)
 
 Dependencies
 
