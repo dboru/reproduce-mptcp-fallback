@@ -10,10 +10,10 @@ ryu-manager $controller &
 
 sleep 2
 
-sudo python mfull-mesh.py
+sudo python mfull-mesh.py --subflows $1 --pathmanger $2
 
 sim=$!
 
-echo 'python script process id: $sim' 
+echo $sim 
 
 sudo mn -c
